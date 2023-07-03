@@ -1,0 +1,13 @@
+<div>
+	<input class="form-control form-control-lg" [(ngModel)]="start" (keyup)=search()>
+	<input class="form-control form-control-lg" [(ngModel)]="end" (keyup)=search()>
+	<table class="direction-list">
+		<tr *ngFor="let step of (directions$ | async).steps; let i = index">
+			<td><img src="{{step.imgUrl}}"></td>
+			<td>{{i+1}}</td>
+			<td><a target="_blank" href={{step.stepUrl}}>{{step.text}}</a></td>
+			<td>{{step.distance}}mi</td>
+		</tr>
+	</table>
+	<h4>Distance: {{(directions$ | async).distance}}mi Total Time: {{(directions$ | async).time}}s</h4>
+</div>
