@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 
 export class MapQuestService {
-      API_KEY = 333333//API KEY; api key alınacak/////
+      API_KEY =:8sm0Wj5hBzry0HxOhCJ2fyilcch54hE6;
       url= 'http://open.mapquestapi.com/directions/v2/route';
   constructor(private http: HttpClient) { }
 
